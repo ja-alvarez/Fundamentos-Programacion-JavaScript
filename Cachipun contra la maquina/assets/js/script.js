@@ -36,22 +36,26 @@ $(document).ready(function () {
             userOption = userChoice[userOption];
             machineOption = userChoice[Math.floor((Math.random() * 3) + 1)];
             if (userOption === machineOption) {
-                results.push(`It's a tie: Your choice: ${userOption} - Machine's choice: ${machineOption}`);
+                results.push(`It's a tie: Your choice: ${userOption} vs. Machine's choice: ${machineOption}`);
+                alert(results[i]);   
             } else if (
                 (userOption === "rock" && machineOption === "scissors") ||
                 (userOption === "scissors" && machineOption === "paper") ||
                 (userOption === "paper" && machineOption === "rock")
+                
             ) {
-                results.push(`You win: Your choice: ${userOption} - Machine's choice: ${machineOption}`);
+                results.push(`You win: Your choice: ${userOption} vs. Machine's choice: ${machineOption}`);
                 counterUser++;
+                alert(results[i]);   
             } else {
-                results.push(`You lose: Your choice:  ${userOption} - Machine's choice: ${machineOption}`);
+                results.push(`You lose: Your choice:  ${userOption} vs. Machine's choice: ${machineOption}`);
                 counterMachine++;
-            }
+                alert(results[i]);   
+            }          
         }
-        for (i = 0; i < results.length; i++) {
+    /*   for (i = 0; i < results.length; i++) {
             alert(results[i]);
-        }
+        } */
         alert(`Final results:\nYou: ${counterUser} \nMachine: ${counterMachine}`);
         if (counterUser > counterMachine) {
             alert("Congratulations! You won the game!");
