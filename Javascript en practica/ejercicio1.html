@@ -81,8 +81,6 @@
                 if (validacionLetras.test(campos[i]) == false || campos[i] === '') {
                     document.querySelector(selectores[i]).innerHTML = mensajes[i];
                     pasamosLaValidacion = false;
-                } else {
-                    document.querySelector(selectores[i]).innerHTML = "";
                 }
             }
             return pasamosLaValidacion;
