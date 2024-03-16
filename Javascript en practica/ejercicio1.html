@@ -78,7 +78,7 @@
             let selectores = [".errorNombre", ".errorAsunto", ".errorMensaje"];
             let validacionLetras = /^[a-zA-Z]+$/;
             for (let i = 0; i < campos.length; i++) {
-                if (!validacionLetras.test(campos[i]) || campos[i] === '') {
+                if (validacionLetras.test(campos[i]) == false || campos[i] === '') {
                     document.querySelector(selectores[i]).innerHTML = mensajes[i];
                     pasamosLaValidacion = false;
                 } else {
