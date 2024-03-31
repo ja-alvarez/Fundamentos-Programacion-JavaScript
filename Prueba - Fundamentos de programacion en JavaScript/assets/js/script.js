@@ -16,7 +16,6 @@ $(function () {
     })
 
     function getHero(id) {
-        console.log(`hola ${id}`);
         let urlBase = "https://www.superheroapi.com/api.php/4905856019427443/" + id;
         $.ajax({
             method: "GET",
@@ -40,8 +39,6 @@ $(function () {
             alert("Error al procesar al Héroe, verificar información ingresada.");
         })
     };
-
-    console.log(Hero(hero[213]));
 
     function loadCardHero(hero){
         $("#cardHero-imagen").attr("src", hero.imagen);
